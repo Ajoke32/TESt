@@ -1,0 +1,1 @@
+tasm32.exe lr_02.asm /l

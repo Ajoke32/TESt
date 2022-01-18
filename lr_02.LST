@@ -1,0 +1,78 @@
+Turbo Assembler	 Version 5.0	    11-02-21 22:58:39	    Page 1
+lr_02.asm
+
+
+
+      1	0000			     .MODEL tiny
+      2	0000			     .DATA
+      3				     ;---------- float (DWord)
+      4	0000  45574000		     f0	dd 3444.00
+      5	0004  C5574000		     f1	dd -3444.00
+      6	0008  391D4952		     f2	dd  0.00015
+      7	000C  B91D4952		     f3	dd -0.00015
+      8	0010  45574001		     f4	dd 3444.00015
+      9	0014  C5574001		     f5	dd -3444.00015
+     10				     ;---------- double	(QWord)
+     11	0018  40AAE80000000000	     f6	dq 3444.00
+     12	0020  C0AAE80000000000	     f7	dq -3444.00
+     13	0028  3F23A92A30553261	     f8	dq 0.00015
+     14	0030  BF23A92A30553261	     f9	dq -0.00015
+     15	0038  40AAE80013A92A30	     f10 dq 3444.00015
+     16	0040  C0AAE80013A92A30	     f11 dq -3444.00015
+     17				     ;---------- long double
+     18	0048  400AD740000000000000   f12 dt 3444.00
+     19	0052  C00AD740000000000000   f13 dt -3444.00
+     20	005C  3FF29D495182A9930BE1   f14 dt 0.00015
+     21	0066  BFF29D495182A9930BE1   f15 dt -0.00015
+     22	0070  400AD740009D495182A9   f16 dt 3444.00015
+     23	007A  C00AD740009D495182A9   f17 dt -3444.00015
+     24				     END
+Turbo Assembler	 Version 5.0	    11-02-21 22:58:39	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "11-02-21"
+??FILENAME			  Text	 "lr_02	  "
+??TIME				  Text	 "22:58:39"
+??VERSION			  Number 0500
+@32BIT				  Text	 0
+@CODE				  Text	 DGROUP
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _DATA
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LR_02
+@INTERFACE			  Text	 000H
+@MODEL				  Text	 1
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+F0				  Dword	 DGROUP:0000
+F1				  Dword	 DGROUP:0004
+F10				  Qword	 DGROUP:0038
+F11				  Qword	 DGROUP:0040
+F12				  Tbyte	 DGROUP:0048
+F13				  Tbyte	 DGROUP:0052
+F14				  Tbyte	 DGROUP:005C
+F15				  Tbyte	 DGROUP:0066
+F16				  Tbyte	 DGROUP:0070
+F17				  Tbyte	 DGROUP:007A
+F2				  Dword	 DGROUP:0008
+F3				  Dword	 DGROUP:000C
+F4				  Dword	 DGROUP:0010
+F5				  Dword	 DGROUP:0014
+F6				  Qword	 DGROUP:0018
+F7				  Qword	 DGROUP:0020
+F8				  Qword	 DGROUP:0028
+F9				  Qword	 DGROUP:0030
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  0084 Word	  Public  DATA
+  _TEXT				  16  0000 Word	  Public  CODE
+
